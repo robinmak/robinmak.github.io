@@ -40,8 +40,8 @@ const PROJECTS: Project[] = [
     description:
       "A CrewAI crew of agents reads corporate sustainability and annual reports, scores each TCFD criterion, and grades overall disclosure quality.",
     meta: "Python, CrewAI",
-    imageRatio: 1640 / 1082,
-    image: "/esg-agentic-platform.jpeg",
+    imageRatio: 3020 / 1702,
+    image: "/esg-agentic-platform.png",
     imageAlt: "ESG agentic platform preview",
     repo: "https://github.com/robinmak/esg-agentic-platform",
   },
