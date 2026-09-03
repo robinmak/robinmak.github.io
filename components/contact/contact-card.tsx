@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -44,6 +44,11 @@ export function ContactCard(): ReactNode {
                     href="https://github.com/robinmak"
                     label="GitHub"
                     lucideIcon={Github}
+                  />
+                  <SocialIcon
+                    href="https://www.linkedin.com/in/robinmak/"
+                    label="LinkedIn"
+                    lucideIcon={Linkedin}
                   />
                 </div>
                 <div className="flex flex-col items-center gap-1 text-center">
