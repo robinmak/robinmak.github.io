@@ -54,7 +54,7 @@ const PROJECTS: Project[] = [
     description:
       "An integrated benchmark and agentic pipeline for claim-evidence reasoning in LLM-generated financial-services documents.",
     meta: "Python, Benchmark",
-    imageRatio: 2400 / 4076,
+    imageRatio: 1450 / 1034,
     image: "/chain-of-claims.png",
     imageAlt: "Chain of Claims benchmark preview",
     repo: "https://github.com/robinmak/chain-of-claims",
