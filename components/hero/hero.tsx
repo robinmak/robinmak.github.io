@@ -29,8 +29,8 @@ export function Hero(): ReactNode {
             </h1>
 
             <p className="max-w-[34ch] text-[22px] leading-[1.4] tracking-tight text-foreground/65">
-              Making a Difference in the next internet, building agentic AI for
-              finance and ESG. Live infinitely, learn always.
+              Making a difference in the next internet, building at the
+              frontier of finance and intelligence.
             </p>
 
             <HeroCtas />
