@@ -21,7 +21,7 @@ export function Hero(): ReactNode {
               , I&rsquo;m Robin Mak
             </p>
 
-            <h1 className="text-[2.75rem] font-medium leading-[1.05] tracking-tight text-foreground md:text-[2.5rem] lg:text-[3.65rem]">
+            <h1 className="text-[2.4rem] font-medium leading-[1.05] tracking-tight text-foreground md:text-[2.25rem] lg:text-[3.15rem]">
               <span className="block whitespace-nowrap">
                 MAD in the Next Internet
               </span>
