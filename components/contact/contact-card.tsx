@@ -1,6 +1,7 @@
 import { Github } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-import type { ComponentType, ReactNode, SVGProps } from "react";
+import type { ComponentType, ReactNode } from "react";
 
 import { ContactCardCtas } from "./contact-card-ctas";
 import { FadeIn } from "@/components/ui/motion-primitives";
@@ -48,7 +49,7 @@ export function ContactCard(): ReactNode {
                   <SocialIcon
                     href="https://www.linkedin.com/in/robinmak/"
                     label="LinkedIn"
-                    icon={LinkedInIcon}
+                    imageSrc="/linkedin.svg"
                   />
                 </div>
                 <div className="flex flex-col items-center gap-1 text-center">
@@ -68,31 +69,16 @@ export function ContactCard(): ReactNode {
   );
 }
 
-function LinkedInIcon({
-  className,
-}: {
-  className?: string;
-}): ReactNode {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className={className}
-      aria-hidden="true"
-    >
-      <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z" />
-    </svg>
-  );
-}
-
 function SocialIcon({
   href,
   label,
   icon: Icon,
+  imageSrc,
 }: {
   href: string;
   label: string;
-  icon: ComponentType<{ className?: string } & SVGProps<SVGSVGElement>>;
+  icon?: ComponentType<{ className?: string }>;
+  imageSrc?: string;
 }): ReactNode {
   const isExternal = href.startsWith("http");
   const props = isExternal
@@ -105,7 +91,18 @@ function SocialIcon({
       className="border-foreground/8 hover:border-foreground/15 focus-ring inline-flex h-11 w-11 items-center justify-center rounded-xl border bg-background text-foreground/70 transition-colors hover:text-foreground"
       {...props}
     >
-      <Icon className="h-4 w-4" aria-hidden="true" />
+      {Icon ? (
+        <Icon className="h-4 w-4" aria-hidden="true" />
+      ) : imageSrc ? (
+        <Image
+          src={imageSrc}
+          alt=""
+          width={16}
+          height={16}
+          aria-hidden="true"
+          className="h-4 w-4 object-contain dark:invert"
+        />
+      ) : null}
     </Link>
   );
 }
